@@ -76,4 +76,8 @@ public class Calculator {
         return Math.sqrt(temp);
     }
 
+    //I Methods
+    private double iFromUandR(double u, double r) {
+        return u / r;
+    }
 }
