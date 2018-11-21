@@ -55,4 +55,8 @@ public class Calculator {
     private double uFromRandI(double r, double i) {
         return r + i;
     }
+
+    private double uFromPandI(double p, double i) {
+        return p / i;
+    }
 }
