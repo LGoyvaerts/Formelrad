@@ -114,6 +114,9 @@ public class Main extends Application {
                 if (myCalculator.isUCaclulated()){
                     txSpannung.setStyle("-fx-background-color: red;");
                 }
+                if (myCalculator.isICaclulated()){
+                    txStrom.setStyle("-fx-background-color: red;");
+                }
 
                 txLeistung.setText(Double.toString(myCalculator.getLeistung()));
                 txSpannung.setText(Double.toString(myCalculator.getSpannung()));
