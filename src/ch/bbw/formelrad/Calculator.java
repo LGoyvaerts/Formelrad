@@ -126,7 +126,7 @@ public class Calculator {
 
     //U Methods
     private double uFromRandI(double r, double i) {
-        System.out.println("U is calculated from R and I");
+        System.out.println("U (" + (r + i) + ") is calculated from R (" + r + ") and I (" + i + ")");
         return r + i;
     }
 
