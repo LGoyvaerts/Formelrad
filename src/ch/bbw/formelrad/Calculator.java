@@ -46,7 +46,7 @@ public class Calculator {
         /* Hier auf Grund der vorhanden Werte entscheiden
          * welche Methode unten aufgerufen werden muss.
          */
-        if (leistung == 0 && spannung == 0){
+        if (leistung == 0 && spannung == 0) {
             leistung = pFromRandI(widerstand, strom);
             spannung = uFromRandI(widerstand, strom);
             isPCaclulated = true;
@@ -76,6 +76,30 @@ public class Calculator {
             widerstand = rFromUandP(spannung, leistung);
             isICaclulated = true;
             isRCaclulated = true;
+        } else if (leistung != 0 && spannung != 0 && strom != 0) {
+            System.out.println("Es wurden mehr als zwei Grössen angegeben");
+            leistung = 0;
+            spannung = 0;
+            strom = 0;
+            widerstand = 0;
+        } else if (leistung != 0 && spannung != 0 && widerstand != 0) {
+            System.out.println("Es wurden mehr als zwei Grössen angegeben");
+            leistung = 0;
+            spannung = 0;
+            strom = 0;
+            widerstand = 0;
+        } else if (leistung != 0 && strom != 0 && widerstand != 0) {
+            System.out.println("Es wurden mehr als zwei Grössen angegeben");
+            leistung = 0;
+            spannung = 0;
+            strom = 0;
+            widerstand = 0;
+        } else if (spannung != 0 && strom != 0 && widerstand != 0) {
+            System.out.println("Es wurden mehr als zwei Grössen angegeben");
+            leistung = 0;
+            spannung = 0;
+            strom = 0;
+            widerstand = 0;
         }
     }
 
