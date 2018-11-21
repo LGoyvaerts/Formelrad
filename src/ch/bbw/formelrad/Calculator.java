@@ -5,6 +5,10 @@ public class Calculator {
     private double spannung;
     private double strom;
     private double widerstand;
+    private boolean isPCaclulated = false;
+    private boolean isUCaclulated = false;
+    private boolean isICaclulated = false;
+    private boolean isRCaclulated = false;
 
     public Calculator(double leistung, double spannung, double strom, double widerstand) {
         super();
@@ -45,6 +49,8 @@ public class Calculator {
         if (leistung == 0 && spannung == 0){
             leistung = pFromRandI(widerstand, strom);
             spannung = uFromRandI(widerstand, strom);
+            isPCaclulated = true;
+            isUCaclulated = true;
         }else if (leistung == 0 && strom == 0){
             leistung = pFromUandR(spannung, widerstand);
             strom = iFromUandR(spannung, widerstand);
