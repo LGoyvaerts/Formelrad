@@ -51,27 +51,27 @@ public class Calculator {
             spannung = uFromRandI(widerstand, strom);
             isPCaclulated = true;
             isUCaclulated = true;
-        }else if (leistung == 0 && strom == 0){
+        } else if (leistung == 0 && strom == 0) {
             leistung = pFromUandR(spannung, widerstand);
             strom = iFromUandR(spannung, widerstand);
             isPCaclulated = true;
             isICaclulated = true;
-        }else if (leistung == 0 && widerstand == 0){
+        } else if (leistung == 0 && widerstand == 0) {
             leistung = pFromUandI(spannung, strom);
             widerstand = rFromUandI(spannung, strom);
             isPCaclulated = true;
             isRCaclulated = true;
-        }else if (spannung == 0 && strom == 0){
+        } else if (spannung == 0 && strom == 0) {
             spannung = uFromPandR(leistung, widerstand);
             strom = iFromPandR(leistung, widerstand);
             isUCaclulated = true;
             isICaclulated = true;
-        }else if (spannung == 0 && widerstand == 0){
+        } else if (spannung == 0 && widerstand == 0) {
             spannung = uFromPandI(leistung, strom);
             widerstand = rFromPandI(leistung, strom);
             isUCaclulated = true;
             isRCaclulated = true;
-        }else if (strom == 0 && widerstand == 0){
+        } else if (strom == 0 && widerstand == 0) {
             strom = iFromPandU(leistung, spannung);
             widerstand = rFromUandP(spannung, leistung);
             isICaclulated = true;
@@ -108,71 +108,71 @@ public class Calculator {
 
     //P Methods
     private double pFromUandI(double u, double i) {
-        System.out.println("P is calculated from U and I");
+        System.out.println("P (" + u * i + ") is calculated from U (" + u + ") and I (" + i + ")");
         return u * i;
     }
 
     private double pFromUandR(double u, double r) {
         double temp = u * u;
-        System.out.println("P is calculated from U and R");
+        System.out.println("P (" + temp / r + ") is calculated from U (" + u + ") and R(" + r + ")");
         return temp / r;
     }
 
     private double pFromRandI(double r, double i) {
         double temp = i * i;
-        System.out.println("P is calculated from R and I");
+        System.out.println("P (" + temp * r + ") is calculated from R (" + r + ") and I (" + i + ")");
         return r * temp;
     }
 
     //U Methods
     private double uFromRandI(double r, double i) {
-        System.out.println("U is calculated from R and I");
+        System.out.println("U (" + (r + i) + ") is calculated from R (" + r + ") and I (" + i + ")");
         return r + i;
     }
 
     private double uFromPandI(double p, double i) {
-        System.out.println("U is calculated from P and I");
+        System.out.println("U (" + p / i + ") is calculated from P (" + p + ") and I (" + i + ")");
         return p / i;
     }
 
     private double uFromPandR(double p, double r) {
         double temp = p * r;
-        System.out.println("U is calculated from P and R");
+        System.out.println("U (" + Math.sqrt(temp) + ") is calculated from P (" + p + ") and R (" + r + ")");
         return Math.sqrt(temp);
     }
 
     //I Methods
     private double iFromUandR(double u, double r) {
-        System.out.println("I is calculated from U and R");
+        System.out.println("I (" + u / r + ") is calculated from U (" + u + ") and R (" + r + ")");
         return u / r;
     }
 
     private double iFromPandU(double p, double u) {
-        System.out.println("I is calculated from P and U");
+        System.out.println("I (" + p / u + ") is calculated from P (" + p + ") and U (" + u + ")");
         return p / u;
     }
 
     private double iFromPandR(double p, double r) {
         double temp = p / r;
-        System.out.println("I is calculated from P and R");
+        System.out.println("I (" + Math.sqrt(temp) + ") is calculated from P (" + p + ") and R (" + r + ")");
         return Math.sqrt(temp);
     }
 
     //R Methods
     private double rFromUandI(double u, double i) {
-        System.out.println("R is calculated from U and I");
+        System.out.println("R (" + u / i + ") is calculated from U (" + u + ") and I (" + i + ")");
         return u / i;
     }
 
     private double rFromUandP(double u, double p) {
         double temp = u * u;
-        System.out.println("R is calculated from U and P");
+        System.out.println("R (" + temp / p + ") is calculated from U (" + u + ")and P (" + p + ")");
         return temp / p;
     }
 
     private double rFromPandI(double p, double i) {
         double temp = i * i;
-        System.out.println("R is calculated from P and I");
+        System.out.println("R (" + p / temp + ") is calculated from P (" + p + ") and I (" + i + ")");
         return p / temp;
     }
 
