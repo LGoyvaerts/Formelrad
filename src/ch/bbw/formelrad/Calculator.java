@@ -48,6 +48,9 @@ public class Calculator {
         }else if (leistung == 0 && strom == 0){
             leistung = pFromUandR(spannung, widerstand);
             strom = iFromUandR(spannung, widerstand);
+        }else if (leistung == 0 && widerstand == 0){
+            leistung = pFromUandI(spannung, strom);
+            widerstand = rFromUandI(spannung, strom);
         }
     }
 
