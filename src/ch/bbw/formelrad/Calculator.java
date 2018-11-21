@@ -120,7 +120,7 @@ public class Calculator {
 
     private double pFromRandI(double r, double i) {
         double temp = i * i;
-        System.out.println("P is calculated from R and I");
+        System.out.println("P (" + temp * r + ") is calculated from R (" + r + ") and I (" + i + ")");
         return r * temp;
     }
 
