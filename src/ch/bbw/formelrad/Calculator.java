@@ -59,4 +59,9 @@ public class Calculator {
     private double uFromPandI(double p, double i) {
         return p / i;
     }
+
+    private double uFromPandR(double p, double r) {
+        double temp = p * r;
+        return Math.sqrt(temp);
+    }
 }
