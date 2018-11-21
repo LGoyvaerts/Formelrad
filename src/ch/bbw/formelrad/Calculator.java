@@ -74,6 +74,8 @@ public class Calculator {
         }else if (strom == 0 && widerstand == 0){
             strom = iFromPandU(leistung, spannung);
             widerstand = rFromUandP(spannung, leistung);
+            isICaclulated = true;
+            isRCaclulated = true;
         }
     }
 
