@@ -47,8 +47,19 @@ public class Calculator {
     /* Hier die Methoden mit den Formlen hinzuf�gen
      */
 
+    //P Methods
     private double pFromUandI(double u, double i) {
         return u * i;
+    }
+
+    private double pFromUandR(double u, double r) {
+        double temp = u * u;
+        return temp / r;
+    }
+
+    private double pFromRandI(double r, double i) {
+        double temp = i * i;
+        return r * temp;
     }
 
     //U Methods
@@ -64,4 +75,5 @@ public class Calculator {
         double temp = p * r;
         return Math.sqrt(temp);
     }
+
 }
