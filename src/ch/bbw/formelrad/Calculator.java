@@ -160,7 +160,7 @@ public class Calculator {
 
     //R Methods
     private double rFromUandI(double u, double i) {
-        System.out.println("R is calculated from U and I");
+        System.out.println("R (" + u / i + ") is calculated from U (" + u + ") and I (" + i + ")");
         return u / i;
     }
 
