@@ -102,11 +102,11 @@ public class Main extends Application {
                 }
                 Calculator myCalculator = new Calculator(
                         power, tension, current, resistence);
-                System.out.print("Vorher:  ");
+                System.out.print("\nVorher:  ");
                 System.out.println(myCalculator.toString());
                 myCalculator.calculate();
                 System.out.print("Nachher: ");
-                System.out.println(myCalculator.toString());
+                System.out.println(myCalculator.toString()+"\n");
 
                 if (myCalculator.isPCaclulated()){
                     txLeistung.setStyle("-fx-background-color: red;");
