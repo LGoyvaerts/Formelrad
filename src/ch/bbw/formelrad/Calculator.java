@@ -137,7 +137,7 @@ public class Calculator {
 
     private double uFromPandR(double p, double r) {
         double temp = p * r;
-        System.out.println("U is calculated from P and R");
+        System.out.println("U (" + Math.sqrt(temp) + ") is calculated from P (" + p + ") and R (" + r + ")");
         return Math.sqrt(temp);
     }
 
