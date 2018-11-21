@@ -108,6 +108,7 @@ public class Calculator {
 
     //P Methods
     private double pFromUandI(double u, double i) {
+        System.out.println("P is calculated from U and I");
         return u * i;
     }
 
