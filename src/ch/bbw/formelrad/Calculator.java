@@ -42,6 +42,10 @@ public class Calculator {
         /* Hier auf Grund der vorhanden Werte entscheiden
          * welche Methode unten aufgerufen werden muss.
          */
+        if (leistung == 0 && spannung == 0){
+            leistung = pFromRandI(widerstand, strom);
+            spannung = uFromRandI(widerstand, strom);
+        }
     }
 
     /* Hier die Methoden mit den Formlen hinzuf�gen
