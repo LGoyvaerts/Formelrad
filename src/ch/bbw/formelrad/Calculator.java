@@ -108,59 +108,71 @@ public class Calculator {
 
     //P Methods
     private double pFromUandI(double u, double i) {
+        System.out.println("P is calculated from U and I");
         return u * i;
     }
 
     private double pFromUandR(double u, double r) {
         double temp = u * u;
+        System.out.println("P is calculated from U and R");
         return temp / r;
     }
 
     private double pFromRandI(double r, double i) {
         double temp = i * i;
+        System.out.println("P is calculated from R and I");
         return r * temp;
     }
 
     //U Methods
     private double uFromRandI(double r, double i) {
+        System.out.println("U is calculated from R and I");
         return r + i;
     }
 
     private double uFromPandI(double p, double i) {
+        System.out.println("U is calculated from P and I");
         return p / i;
     }
 
     private double uFromPandR(double p, double r) {
         double temp = p * r;
+        System.out.println("U is calculated from P and R");
         return Math.sqrt(temp);
     }
 
     //I Methods
     private double iFromUandR(double u, double r) {
+        System.out.println("I is calculated from U and R");
         return u / r;
     }
 
     private double iFromPandU(double p, double u) {
+        System.out.println("I is calculated from P and U");
         return p / u;
     }
 
     private double iFromPandR(double p, double r) {
         double temp = p / r;
+        System.out.println("I is calculated from P and R");
         return Math.sqrt(temp);
     }
 
     //R Methods
     private double rFromUandI(double u, double i) {
+        System.out.println("R is calculated from U and I");
         return u / i;
     }
 
     private double rFromUandP(double u, double p) {
         double temp = u * u;
+        System.out.println("R is calculated from U and P");
         return temp / p;
     }
 
     private double rFromPandI(double p, double i) {
         double temp = i * i;
+        System.out.println("R is calculated from P and I");
         return p / temp;
     }
 
