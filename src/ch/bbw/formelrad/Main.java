@@ -104,6 +104,8 @@ public class Main extends Application {
                 System.out.print("Nachher: ");
                 System.out.println(myCalculator.toString());
 
+
+
                 txLeistung.setText(Double.toString(myCalculator.getLeistung()));
                 txSpannung.setText(Double.toString(myCalculator.getSpannung()));
                 txStrom.setText(Double.toString(myCalculator.getStrom()));

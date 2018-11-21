@@ -139,4 +139,20 @@ public class Calculator {
         double temp = i * i;
         return p / temp;
     }
+
+    public boolean isPCaclulated() {
+        return isPCaclulated;
+    }
+
+    public boolean isUCaclulated() {
+        return isUCaclulated;
+    }
+
+    public boolean isICaclulated() {
+        return isICaclulated;
+    }
+
+    public boolean isRCaclulated() {
+        return isRCaclulated;
+    }
 }
