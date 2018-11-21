@@ -50,4 +50,9 @@ public class Calculator {
     private double pFromUandI(double u, double i) {
         return u * i;
     }
+
+    //U Methods
+    private double uFromRandI(double r, double i) {
+        return r + i;
+    }
 }
