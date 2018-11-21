@@ -80,6 +80,10 @@ public class Main extends Application {
             root.getChildren().add(btnBerechnen);
 
             btnBerechnen.setOnAction(e -> {
+                txLeistung.setStyle("-fx-background-color: white;");
+                txSpannung.setStyle("-fx-background-color: white;");
+                txStrom.setStyle("-fx-background-color: white;");
+                txWiderstand.setStyle("-fx-background-color: white;");
                 double power = 0.0;
                 double tension = 0.0;
                 double current = 0.0;
@@ -104,7 +108,9 @@ public class Main extends Application {
                 System.out.print("Nachher: ");
                 System.out.println(myCalculator.toString());
 
-
+                if (myCalculator.isPCaclulated()){
+                    txLeistung.setStyle("-fx-background-color: red;");
+                }
 
                 txLeistung.setText(Double.toString(myCalculator.getLeistung()));
                 txSpannung.setText(Double.toString(myCalculator.getSpannung()));
