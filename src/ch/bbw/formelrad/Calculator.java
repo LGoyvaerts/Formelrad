@@ -148,7 +148,7 @@ public class Calculator {
     }
 
     private double iFromPandU(double p, double u) {
-        System.out.println("I is calculated from P and U");
+        System.out.println("I (" + p / u + ") is calculated from P (" + p + ") and U (" + u + ")");
         return p / u;
     }
 
