@@ -51,27 +51,27 @@ public class Calculator {
             spannung = uFromRandI(widerstand, strom);
             isPCaclulated = true;
             isUCaclulated = true;
-        }else if (leistung == 0 && strom == 0){
+        } else if (leistung == 0 && strom == 0) {
             leistung = pFromUandR(spannung, widerstand);
             strom = iFromUandR(spannung, widerstand);
             isPCaclulated = true;
             isICaclulated = true;
-        }else if (leistung == 0 && widerstand == 0){
+        } else if (leistung == 0 && widerstand == 0) {
             leistung = pFromUandI(spannung, strom);
             widerstand = rFromUandI(spannung, strom);
             isPCaclulated = true;
             isRCaclulated = true;
-        }else if (spannung == 0 && strom == 0){
+        } else if (spannung == 0 && strom == 0) {
             spannung = uFromPandR(leistung, widerstand);
             strom = iFromPandR(leistung, widerstand);
             isUCaclulated = true;
             isICaclulated = true;
-        }else if (spannung == 0 && widerstand == 0){
+        } else if (spannung == 0 && widerstand == 0) {
             spannung = uFromPandI(leistung, strom);
             widerstand = rFromPandI(leistung, strom);
             isUCaclulated = true;
             isRCaclulated = true;
-        }else if (strom == 0 && widerstand == 0){
+        } else if (strom == 0 && widerstand == 0) {
             strom = iFromPandU(leistung, spannung);
             widerstand = rFromUandP(spannung, leistung);
             isICaclulated = true;
@@ -108,7 +108,7 @@ public class Calculator {
 
     //P Methods
     private double pFromUandI(double u, double i) {
-        System.out.println("P is calculated from U and I");
+        System.out.println("P (" + u * i + ") is calculated from U (" + u + ") and I (" + i + ")");
         return u * i;
     }
 
