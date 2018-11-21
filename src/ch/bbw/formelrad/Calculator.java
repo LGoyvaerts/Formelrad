@@ -42,24 +42,30 @@ public class Calculator {
         /* Hier auf Grund der vorhanden Werte entscheiden
          * welche Methode unten aufgerufen werden muss.
          */
-        if (leistung == 0 && spannung == 0){
+        if (leistung == 0 && spannung == 0) {
             leistung = pFromRandI(widerstand, strom);
             spannung = uFromRandI(widerstand, strom);
-        }else if (leistung == 0 && strom == 0){
+        } else if (leistung == 0 && strom == 0) {
             leistung = pFromUandR(spannung, widerstand);
             strom = iFromUandR(spannung, widerstand);
-        }else if (leistung == 0 && widerstand == 0){
+        } else if (leistung == 0 && widerstand == 0) {
             leistung = pFromUandI(spannung, strom);
             widerstand = rFromUandI(spannung, strom);
-        }else if (spannung == 0 && strom == 0){
+        } else if (spannung == 0 && strom == 0) {
             spannung = uFromPandR(leistung, widerstand);
             strom = iFromPandR(leistung, widerstand);
-        }else if (spannung == 0 && widerstand == 0){
+        } else if (spannung == 0 && widerstand == 0) {
             spannung = uFromPandI(leistung, strom);
             widerstand = rFromPandI(leistung, strom);
-        }else if (strom == 0 && widerstand == 0){
+        } else if (strom == 0 && widerstand == 0) {
             strom = iFromPandU(leistung, spannung);
             widerstand = rFromUandP(spannung, leistung);
+        } else if (leistung != 0 && spannung != 0 && strom != 0) {
+            System.out.println("Es wurden mehr als zwei Grössen angegeben");
+            leistung = 0;
+            spannung = 0;
+            strom = 0;
+            widerstand = 0;
         }
     }
 
