@@ -154,6 +154,7 @@ public class Calculator {
 
     private double iFromPandR(double p, double r) {
         double temp = p / r;
+        System.out.println("I is calculated from P and R");
         return Math.sqrt(temp);
     }
 
