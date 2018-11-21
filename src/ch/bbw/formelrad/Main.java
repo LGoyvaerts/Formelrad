@@ -106,7 +106,7 @@ public class Main extends Application {
                 System.out.println(myCalculator.toString());
                 myCalculator.calculate();
                 System.out.print("Nachher: ");
-                System.out.println(myCalculator.toString());
+                System.out.println(myCalculator.toString()+"\n");
 
                 if (myCalculator.isPCaclulated()){
                     txLeistung.setStyle("-fx-background-color: red;");
