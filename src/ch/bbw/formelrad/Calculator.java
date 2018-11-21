@@ -72,6 +72,12 @@ public class Calculator {
             spannung = 0;
             strom = 0;
             widerstand = 0;
+        } else if (leistung != 0 && strom != 0 && widerstand != 0) {
+            System.out.println("Es wurden mehr als zwei Grössen angegeben");
+            leistung = 0;
+            spannung = 0;
+            strom = 0;
+            widerstand = 0;
         }
     }
 
