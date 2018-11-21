@@ -76,4 +76,18 @@ public class Calculator {
         return Math.sqrt(temp);
     }
 
+    //R Methods
+    private double rFromUandI(double u, double i) {
+        return u / i;
+    }
+
+    private double rFromUandP(double u, double p) {
+        double temp = u * u;
+        return temp / p;
+    }
+
+    private double rFromPandI(double p, double i) {
+        double temp = i * i;
+        return p / temp;
+    }
 }
