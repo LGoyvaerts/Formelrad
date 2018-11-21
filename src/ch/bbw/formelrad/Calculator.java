@@ -114,7 +114,7 @@ public class Calculator {
 
     private double pFromUandR(double u, double r) {
         double temp = u * u;
-        System.out.println("P is calculated from U and R");
+        System.out.println("P (" + temp / r + ") is calculated from U (" + u + ") and R(" + r + ")");
         return temp / r;
     }
 
