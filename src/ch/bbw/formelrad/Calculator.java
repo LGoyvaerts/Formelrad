@@ -5,6 +5,10 @@ public class Calculator {
     private double spannung;
     private double strom;
     private double widerstand;
+    private boolean isPCaclulated = false;
+    private boolean isUCaclulated = false;
+    private boolean isICaclulated = false;
+    private boolean isRCaclulated = false;
 
     public Calculator(double leistung, double spannung, double strom, double widerstand) {
         super();
@@ -45,21 +49,33 @@ public class Calculator {
         if (leistung == 0 && spannung == 0){
             leistung = pFromRandI(widerstand, strom);
             spannung = uFromRandI(widerstand, strom);
+            isPCaclulated = true;
+            isUCaclulated = true;
         }else if (leistung == 0 && strom == 0){
             leistung = pFromUandR(spannung, widerstand);
             strom = iFromUandR(spannung, widerstand);
+            isPCaclulated = true;
+            isICaclulated = true;
         }else if (leistung == 0 && widerstand == 0){
             leistung = pFromUandI(spannung, strom);
             widerstand = rFromUandI(spannung, strom);
+            isPCaclulated = true;
+            isRCaclulated = true;
         }else if (spannung == 0 && strom == 0){
             spannung = uFromPandR(leistung, widerstand);
             strom = iFromPandR(leistung, widerstand);
+            isUCaclulated = true;
+            isICaclulated = true;
         }else if (spannung == 0 && widerstand == 0){
             spannung = uFromPandI(leistung, strom);
             widerstand = rFromPandI(leistung, strom);
+            isUCaclulated = true;
+            isRCaclulated = true;
         }else if (strom == 0 && widerstand == 0){
             strom = iFromPandU(leistung, spannung);
             widerstand = rFromUandP(spannung, leistung);
+            isICaclulated = true;
+            isRCaclulated = true;
         }
     }
 
@@ -122,5 +138,21 @@ public class Calculator {
     private double rFromPandI(double p, double i) {
         double temp = i * i;
         return p / temp;
+    }
+
+    public boolean isPCaclulated() {
+        return isPCaclulated;
+    }
+
+    public boolean isUCaclulated() {
+        return isUCaclulated;
+    }
+
+    public boolean isICaclulated() {
+        return isICaclulated;
+    }
+
+    public boolean isRCaclulated() {
+        return isRCaclulated;
     }
 }
